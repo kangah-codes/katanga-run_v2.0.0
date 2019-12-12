@@ -158,7 +158,8 @@ class Player(pygame.sprite.Sprite):
                     if self.vel >= 0 and self.is_falling:
                         if self.pos.x + self.rect.width > enemy.pos.x + enemy.rect.width / 2:
                             enemy.is_dead = True
-                            self.vel = -300
+                            #self.vel = -300
+                            self.is_jumping = True
                             self.score += 1
                     else:
                         if enemy.is_dead:
